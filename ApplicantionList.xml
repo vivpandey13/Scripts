@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<applications>
+  <application>
+    <name>Notepad</name>
+    <url>c:\windows\system32\notepad.exe</url>
+  </application>
+  <application Name="sc" url="C:\Webcetera\Source\EzLynx\EzLynx\Apps\SalesCenter\SalesCenter.sln" />
+  <application Name="ac" url="C:\Webcetera\Source\EzLynx\EzLynx\Apps\AutomationCenter\EzLynxAutomationCenter.sln" />
+  <application Name="ezweb" url="C:\Webcetera\Source\EzLynx\EzLynx\Apps\EzLynxWeb\EzLynxWeb.sln" />
+  <application Name="cc" url="C:\Webcetera\Source\EzLynxCustomerServicePortal\Apps\EzLynxCustomerServicePortal\EzLynxCustomerServicePortal.sln" />
+  <application Name="ap" url="C:\Webcetera\Source\EzLynx\EzLynx\Apps\ApplicantPortal\EzLynxApplicantPortal.sln" />
+  <application Name="cca" url="C:\Webcetera\Source\EzLynxCustomerServicePortal\Apps\EzLynxCustomerServicePortalAdmin\EzLynxCustomerServicePortalAdmin.sln" />
+  <application Name="agencyadmin" url="C:\Webcetera\Source\EzLynx\EzLynx\Apps\EzLynxAgencyAdmin\EZLynxAgencyAdmin.sln" />
+  <application Name="cq" url="C:\Webcetera\Source\ConsumerFacingApplications\Apps\EzWebsite\EzWebsite.sln" />
+  <application Name="soss" url="C:\Program Files\ScaleOut_Software\StateServer\soss_console.exe" />
+  <application Name="iis" url="C:\Windows\system32\inetsrv\InetMgr.exe" />
+  <application Name="services" url="C:\Windows\system32\services.msc" />
+  <application Name="vs" url="C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Common7\IDE\devenv.exe" />
+  <application Name="tm" url="C:\Webcetera\Source\EzLynx\EzLynx\Apps\TemplateManager\EzLynxTemplateManager.sln" />
+  <application Name="cm" url="c:\windows\system32\compmgmt.msc" />
+  <application Name="ew" url="C:\Webcetera\Source\EzLynx\EzLynx\Apps\EzLynxWeb\EzLynxWeb.sln" />
+  <application Name="adportal" url="C:\Webcetera\Source\EzLynx\EzLynx\Apps\EzLynxAdminPortal\EzLynxAdminPortal.sln" />
+  <application Name="cp" url="C:\Webcetera\Source\EzLynx\Windows\WindowsServices\EzLynxClaimsProcessor\EzLynxClaimsProcessor.sln" />
+  <application Name="claimmsg" url="C:\Users\Vivek.Pandey\source\repos\ClaimMessage\ClaimMessage.sln" />
+  <application Name="pp" url="C:\Webcetera\Source\EzLynx\Windows\WindowsServices\EzLynxPolicyProcessor\EzLynxPolicyProcessor.sln" />
+  <application Name="cmd" url="C:\Windows\system32\cmd.exe" />
+  <application Name="ds" url="C:\Webcetera\Source\EzLynx\Windows\WindowsServices\EzLynxDownloaderService\EzLynxDownloaderService.sln" />
+  <application Name="ir" url="C:\Webcetera\Source\EzLynx\EzLynx\Apps\EzLynxInternalReports\EzLynxInternalReports.sln" />
+  <application Name="nfs" url="C:\Webcetera\Source\EzLynx\Windows\WindowsServices\EzLynxNotificationService\EzLynxNotificationService.sln" />
+  <application Name="TeamProj" url="C:\Webcetera\Source\EzLynx\EzLynx\Apps\TeamProjectsTest.sln" />
+  <application Name="cpa" url="C:\Webcetera\Source\CarrierPrompts\Apps\EZLynxCarrierPromptsAutomation\EZLynxCarrierPromptsAutomation.sln" />
+  <application Name="notepad" url="c:\windows\system32\notepad.exe" />
+  <application Name="renew" url="C:\Webcetera\Source\EzLynx\EzLynx\Apps\RetentionCenter\EzLynxRenewalCenter.sln" />
+  <application Name="pdf" url="C:\Webcetera\Source\EzLynx\EzLynx\Apps\EzLynxPdfEdit\EzLynxPdfEdit.sln" />
+  <application Name="sms" url="C:\Webcetera\Source\EzLynx\EzLynx\Apps\EzlynxSmsService\EzLynx.SMS.sln" />
+  <application Name="papi" url="C:\Webcetera\Source\EzLynx\EzLynx\Apps\EzLynxPortalAPI\EzLynxPortalAPI.sln" />
+  <application Name="itrans" url="C:\Webcetera\Source\EzLynx\Windows\WindowsServices\IvansTransferService\IvansTransferService.sln" />
+  <application Name="batch" url="C:\Webcetera\Source\EzLynx\Windows\WindowsServices\EzLynxBatchScheduler\EzLynxBatchScheduler.sln" />
+  <application Name="search" url="C:\Webcetera\Source\EzLynx\Windows\WindowsServices\EzLynxSearchUpdateService\EzLynxSearchUpdateService.sln" />
+  <application Name="sendmsg" url="C:\Webcetera\Source\EzLynx\Windows\Desktop\SendMsg\sendmsg.sln" />
+  <application Name="acc" url="C:\Webcetera\Source\Accounting\EzLynxAccounting.sln" />
+  <application Name="api" url="C:\Webcetera\Source\EzLynx\EZLynxAPI\EzLynxAPI.sln" />
+  <application Name="master" url="C:\Webcetera\Source\MasterPages\EzLynxMasterPages.sln" />
+  <application Name="ezm" url="C:\Webcetera\Source\EzLynx\EzLynxMobile\EzLynxMobile.sln" />
+  <application Name="all" url="C:\Webcetera\Source\EzLynx\EzLynx\Apps\AllApps.sln" />
+  <application Name="pwf" url="C:\Webcetera\Source\EzLynx\Windows\WindowsServices\EzLynxPolicyWorkflowService\EzLynxPolicyWorkflowService.sln" />
+  <application Name="event" url="C:\Webcetera\Source\EzLynx\Windows\EventServices\EzLynxEventsService\EzLynxEventsService.sln" />
+  <application Name="compass" url="C:\Webcetera\Source\Compass\Compass-Full.sln" />
+  <application Name="com" url="C:\Webcetera\Source\EzLynx\EzLynx\Apps\EzlynxCommission\EzlynxCommission.sln" />
+  <application Name="code" url="C:\Program Files (x86)\Microsoft VS Code\Code.exe" />
+  <application Name="act" url="C:\Webcetera\Source\EzLynx\EzLynx\Apps\EzLynxActionAPI\EzLynxActionAPI.sln" />
+  <application Name="exp" url="C:\Windows\SysWOW64\explorer.exe" />
+  <application Name="common" url="C:\Webcetera\Source\EzLynx\CommonResources\CommonResources.sln" />
+  <application Name="dla" url="C:\Webcetera\Source\EzLynx\EzLynx\Apps\EzlynxDocumentLibraryApi\EzlynxDocumentLibraryApi.sln" />
+  <application Name="code" url="C:\Program Files\Microsoft VS Code\Code.exe" />
+  <application Name="epolicy" url="C:\Webcetera\Source\EzLynx.Data.EzLynxPolicy\EzLynx.Data.EzLynxPolicy.sln" />
+  <application Name="ssms" url="C:\Program Files (x86)\Microsoft SQL Server\120\Tools\Binn\ManagementStudio\Ssms.exe" />
+  <application Name="esearch" url="C:\Webcetera\source\EzLynx\EzLynx\Apps\EzLynxSearch\EzLynxSearch.sln" />
+  <application Name="cqadmin" url="C:\Webcetera\Source\ConsumerFacingApplications\Apps\EzLynxConsumerQuotingAdmin\EzLynxConsumerQuotingAdmin.sln" />
+  <application Name="aadmin" url="C:\Webcetera\source\EzLynx\EzLynx\Apps\EzLynxAgencyAdmin\EZLynxAgencyAdmin.sln" />
+  <application Name="ezlynx" url="C:\Webcetera\source\EzLynx.Data.EzLynx\EzLynx.Data.EzLynx.sln" />
+  <application Name="lib" url="C:\Webcetera\source\EzLynx\Libraries\EzLynxLibraries.sln" />
+  <application Name="eform" url="C:\Webcetera\source\EzLynx\Windows\Desktop\EzLynxEFormsUtility\EzLynx.EForms.TemplateTools.sln" />
+</applications>
