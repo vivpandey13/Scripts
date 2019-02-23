@@ -7,6 +7,11 @@ Set-Location C:\Users\ra-vpandey\source\repos
 
 #endregion
 
+#region Search
+Set-Location C:\Webcetera\source\EzLynx
+gci -Filter "contact.cs" -r | Select-Object FullName
+#endregion
+
 #region Utility
 .filecopier.ps1 // Copy the files to CIM
 .\taskautomation.bat // Install gulp and grunt in various places
