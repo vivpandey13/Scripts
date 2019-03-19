@@ -4,22 +4,30 @@ Set-Location C:\Users\Vivek.Pandey\Downloads
 Set-Location C:\Webcetera\source\EzLynx\CommonResources
 Set-Location C:\Webcetera\source\EzLynx\EzLynx\Apps\ApplicantPortal\src\EzLynx.ApplicantPortal.App
 Set-Location C:\Users\ra-vpandey\source\repos
+Set-Location C:\Users\ra-vpandey\Documents\WindowsPowerShell\Modules
 
 #endregion
 
 #region Search
-Set-Location C:\Webcetera\source\EzLynx
-gci -Filter "contact.cs" -r | Select-Object FullName
+
+Get-ChildItem -Filter "CacheCleanService.csproj" -r | Select-Object FullName
+Get-ChildItem -recurse |  Select-String -pattern "FileTypeDetector_Tests.Detect_Unknown" | Group-Object path | Select-Object name
 #endregion
 
 #region Utility
-.filecopier.ps1 // Copy the files to CIM
-.\taskautomation.bat // Install gulp and grunt in various places
+.filecopier.ps1 # Copy the files to CIM
+.\taskautomation.bat # Install gulp and grunt in various places
+.\ClientCenterLocalSetup.ps1 
+.\PolicyProcessorSetup.ps1
 #endregion
 
 #region Service
 Get-Service | Where-Object {$_.Name -like "EZLynx*"} | Stop-Service
 Get-Service | Where-Object {$_.Name -like "EZLynx*"} | Start-Service
+Get-Service | where-object {$_.Name -like 'Ezlynx*'} | Format-Table Name, DisplayName, Status
+
+Get-Service "EZLynx Policy Processor" | Stop-Service
+Get-Service "EZLynx Policy Processor" | Start-Service
 #endregion
 
 #region Open
@@ -48,6 +56,7 @@ code .\Tasks.ps1
 #region Toggle Claims Processor service
 net stop EZLynxClaimsSvc
 net start EZLynxClaimsSvc
+
 #endregion
 
 #region Disable http/2
@@ -64,9 +73,9 @@ cleanmgr
 appwiz
 Get-Content C:\Users\Vivek.Pandey\.ssh\id_rsa.pub | clip
 Get-Content -Path $(Join-Path $env:USERPROFILE "\.ssh\id_rsa.pub")  | clip
-sysdm.cpl //Computer properties
+sysdm.cpl #Computer properties
+Get-ChildItem *.txt | Rename-Item -NewName { $_.name -Replace 'Existing', 'New' } #Rename files in a folder
 
 #endregion
-
 
 

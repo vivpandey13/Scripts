@@ -1,29 +1,21 @@
 param(
     [switch] $ls = $false,
-    [switch] $add = $false,
-    [switch] $like = $false)
+    [switch] $add = $false)
 
 $path = "c:\Webcetera\scripts\ApplicantionList.xml"
 $xml = [xml](Get-Content $path)
 if ($ls) {
     $xml.applications.application | Format-Table -AutoSize 
 }
-elseif ($like) {
-    # $searchTeam = (-join( '"*',$args[0],'*"' ))
-    # Write-Host $searchTeam
-    Write-Host ('' + $args[0] + '')
-    $xml.applications.application | Where-Object {$_.Url -like '' + $args[0] + ''}
-}
 elseif ($add) {
     $newapp = $xml.CreateElement("application")
     $newapp.SetAttribute("Name", $args[0])
     $newapp.SetAttribute("url", $args[1])
-    $newapp.SetAttribute("ServiceName", $args[2])
     $xml.applications.AppendChild($newapp)
     $xml.Save($path)
     $xml = [xml](Get-Content $path)
 }
-elseif ($null -ne $args[0]) {
+elseif ( $null -ne $args[0]) {
     $a = $args[0];
     $url = ($xml.applications.application | Where-Object { $_.name.ToLower() -eq $a.ToLower() }).url
     if ($null -ne $url) {
@@ -34,11 +26,9 @@ elseif ($null -ne $args[0]) {
         if ($response.ToLower() -eq "y") {
             $name = Read-Host -Prompt "Enter the application name"
             $url = Read-Host -Prompt "Enter the application url"
-            $srcName = Read-Host -Prompt "Enter the servie name"
             $newapp = $xml.CreateElement("application")
             $newapp.SetAttribute("Name", $name)
             $newapp.SetAttribute("url", $url)
-            $newapp.SetAttribute("ServiceName", $srcName)
             $xml.applications.AppendChild($newapp)
             $xml.Save($path)
             $xml = [xml](Get-Content $path)
