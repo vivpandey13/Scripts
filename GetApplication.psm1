@@ -1,19 +1,25 @@
 function Get-Application {
-    param( [switch] $ls = $false,  [switch] $add = $false)
+    param( [switch] $ls = $false,  [switch] $add = $false,
+    [switch] $like = $false)
 
     $path = "c:\Webcetera\scripts\ApplicantionList.xml"
     $xml = [xml](Get-Content $path)
     if ($ls) {
-        $xml.applications.application | Format-Table -AutoSize 
+        $xml.applications.application
     }
     elseif ($add) {
         New-Application -xml $xml -Name $args[0] -url $args[1] -path $path
+    }    
+    elseif ($like) {
+    
+        $a = "*"+$args[0]+"*"
+        $xml.applications.application| Where-Object {$_.Url -like ($a)}
     }
     elseif ($null -ne $args[0]) {
         $a = $args[0];
-        $url = ($xml.applications.application | Where-Object { $_.name.ToLower() -eq $a.ToLower() }).url
-        if ($null -ne $url) {
-            Return $url 
+        $element = ($xml.applications.application | Where-Object { $_.name.ToLower() -eq $a.ToLower() })
+        if ($null -ne $element) {
+            Return $element 
         }
         else {
             $response = Read-Host -Prompt "The application does not exist, do you want to add the new application" 
@@ -28,7 +34,7 @@ function Get-Application {
         }
     }
     else {
-        Write-Host "The application name is required. Use -ls to see list of applications" -foregroundColor Red
+        Write-Error "The application name is required. Use -ls to see list of applications" 
     }
 }
 
@@ -67,4 +73,7 @@ Your feedback is always appreciated.
 http://www.vivekkumarpandey.com
 
 #>
+
+# Remove-Module GetApplication
+# Import-Module .\GetApplication.psm1
 
